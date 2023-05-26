@@ -20,7 +20,6 @@ a {
     max-width: 1110px;
     margin-left: auto;
     margin-right: auto;
-
 }
 
 .header {
@@ -80,8 +79,7 @@ a {
 }
 
 .main {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding: 40px 40px;
 }
 
 .main__title {
@@ -102,7 +100,7 @@ a {
 
 .card {
     padding: 20px;
-    min-width: 540px;
+    max-width: 540px;
     border: 2px solid #ccc;
     transition: 1.5s all;
     background-color: #f9f9f9;
@@ -151,8 +149,7 @@ a {
 }
 
 .footer {
-    padding-top: 45px;
-    padding-bottom: 120px;
+    padding: 45px 40px 120px;
     background-color: #253d7a;
 }
 
@@ -176,4 +173,51 @@ a {
 
 .footer__icons:hover {
     scale: 1.4;
+}
+
+@media (max-width: 1200px) {
+    .card-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card:hover {
+        transform: scale(1.03);
+    }
+}
+
+@media (max-width: 620px) {
+    .header__title {
+        font-size: 32px;
+    }
+    
+    .header__subtitle {
+        font-size: 24px;
+    }
+
+    .main {
+        padding: 20px;
+    }
+
+    .card {
+        max-width: 320px;
+        padding: 10px;
+    }
+
+    .card__img {
+        width: 296px;
+        height: 190px;
+        margin-bottom: 20px;
+    }
+
+    .footer {
+        padding: 50px 20px 100px;
+    }
+
+    .footer__content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 20px;
+    }
 }
